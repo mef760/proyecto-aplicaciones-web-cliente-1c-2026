@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoRepuestos - Tu tienda de repuestos para automóviles</title>
-    <meta name="description" content="Encuentra los mejores repuestos para tu vehículo. Amplio catálogo de piezas automotor.">
+    <title>ArmáTuPc - Tu tienda de componentes de computadora</title>
+    <meta name="description" content="Encontrá los mejores componentes para armar tu PC. Procesadores, placas de video, memorias, discos y más.">
 </head>
 <body>
     <header>
-        <h1>Repuestos Pepito</h1>
+        <h1>ArmáTuPc</h1>
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#productos">Productos</a></li>
+                <li><a href="#armarpc">Armá tu PC</a></li>
                 <li><a href="#nosotros">Nosotros</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
@@ -21,77 +22,154 @@
 
     <main>
         <section id="inicio">
-            <h2>Bienvenido a Repuestos Pepito</h2>
-            <p>Tu tienda de confianza para repuestos de automóviles. Contamos con amplia variedad de piezas para todas las marcas y modelos.</p>
+            <h2>Bienvenido a ArmáTuPc</h2>
+            <p>Tu tienda online para armar la PC de tus sueños. Encontrá los mejores componentes de hardware al mejor precio.</p>
         </section>
 
         <section id="productos">
             <h2>Nuestros Productos</h2>
             <article>
-                <h3>Repuestos de Motor</h3>
-                <p>Filtros, bujías, correas, rodamientos y más para el corazón de tu vehículo.</p>
+                <h3>Procesadores (CPU)</h3>
+                <p>AMD Ryzen y Intel Core para todas las gamas. Desde entrada hasta gaming extremo.</p>
             </article>
             <article>
-                <h3>Repuestos de Frenos</h3>
-                <p>Pastillas, discos, tambores, líquido de frenos y accesorios de seguridad.</p>
+                <h3>Placas de Video (GPU)</h3>
+                <p>NVIDIA GeForce y AMD Radeon para gaming, edición y trabajo profesional.</p>
             </article>
             <article>
-                <h3>Suspensión y Dirección</h3>
-                <p>Amortiguadores, rotulas, barillas, bujes y componentes de suspensión.</p>
+                <h3>Memorias RAM</h3>
+                <p>DDR4 y DDR5 de las mejores marcas: Kingston, Corsair, G.Skill y más.</p>
             </article>
             <article>
-                <h3>Eléctricos y Electrónicos</h3>
-                <p>Baterías, alternadores, sensores, luces y sistemas de iluminación.</p>
+                <h3>Almacenamiento</h3>
+                <p>Discos SSD NVMe y SATA, discos HDD para almacenamiento masivo.</p>
             </article>
             <article>
-                <h3>Carrocería</h3>
-                <p>Parachoques, espejos, faros, luces y accesorios exteriores.</p>
+                <h3>Motherboards</h3>
+                <p>Placas madre para Intel y AMD. Compatibles con los últimos procesadores.</p>
             </article>
             <article>
-                <h3>Accesorios</h3>
-                <p>Limpiadores, lubricantes, herramientas y productos de mantenimiento.</p>
+                <h3>Fuentes de Alimentación</h3>
+                <p>Fuentes certificadas 80 Plus Bronze, Gold y Platinum. Protegé tu equipo.</p>
+            </article>
+            <article>
+                <h3>Gabinetes y Refrigeración</h3>
+                <p>Gabinetes para todo tipo de configuraciones. Coolers, kits de refrigeración líquida.</p>
+            </article>
+            <article>
+                <h3>Periféricos</h3>
+                <p>Monitores, teclados, mouses, auriculares y accesorios para tu setup.</p>
             </article>
         </section>
 
         <section id="busqueda">
-            <h2>Buscar Repuestos</h2>
+            <h2>Buscar Componentes</h2>
             <form action="#" method="get">
-                <label for="marca">Marca del vehículo:</label>
-                <input type="text" id="marca" name="marca" placeholder="Ej: Toyota">
+                <label for="componente">Tipo de componente:</label>
+                <select id="componente" name="componente">
+                    <option value="">Seleccionar componente</option>
+                    <option value="procesador">Procesador</option>
+                    <option value="gpu">Placa de Video</option>
+                    <option value="ram">Memoria RAM</option>
+                    <option value="almacenamiento">Almacenamiento</option>
+                    <option value="motherboard">Motherboard</option>
+                    <option value="fuente">Fuente de Alimentación</option>
+                    <option value="gabinete">Gabinete</option>
+                    <option value="refrigeracion">Refrigeración</option>
+                    <option value="periferico">Periférico</option>
+                </select>
                 
-                <label for="modelo">Modelo:</label>
-                <input type="text" id="modelo" name="modelo" placeholder="Ej: Corolla">
+                <label for="marca">Marca:</label>
+                <select id="marca" name="marca">
+                    <option value="">Todas las marcas</option>
+                    <option value="amd">AMD</option>
+                    <option value="intel">Intel</option>
+                    <option value="nvidia">NVIDIA</option>
+                    <option value="asus">ASUS</option>
+                    <option value="msi">MSI</option>
+                    <option value="gigabyte">Gigabyte</option>
+                    <option value="kingston">Kingston</option>
+                    <option value="corsair">Corsair</option>
+                    <option value="gskill">G.Skill</option>
+                    <option value="seagate">Seagate</option>
+                    <option value="western">Western Digital</option>
+                </select>
                 
-                <label for="ano">Año:</label>
-                <input type="number" id="ano" name="ano" placeholder="Ej: 2020">
+                <label for="presupuesto">Rango de precio:</label>
+                <select id="presupuesto" name="presupuesto">
+                    <option value="">Cualquier presupuesto</option>
+                    <option value="bajo">Hasta $100.000</option>
+                    <option value="medio">$100.000 - $300.000</option>
+                    <option value="alto">$300.000 - $600.000</option>
+                    <option value="premium">Más de $600.000</option>
+                </select>
                 
-                <label for="categoria">Categoría:</label>
-                <select id="categoria" name="categoria">
-                    <option value="">Seleccionar categoría</option>
-                    <option value="motor">Motor</option>
-                    <option value="frenos">Frenos</option>
-                    <option value="suspension">Suspensión</option>
-                    <option value="electrico">Eléctrico</option>
-                    <option value="carroceria">Carrocería</option>
+                <label for="uso">Uso previsto:</label>
+                <select id="uso" name="uso">
+                    <option value="">Cualquier uso</option>
+                    <option value="oficina">Oficina / Hogar</option>
+                    <option value="gaming">Gaming</option>
+                    <option value="edicion">Edición de video/foto</option>
+                    <option value="programacion">Programación</option>
+                    <option value="trabajo">Trabajo profesional</option>
                 </select>
                 
                 <button type="submit">Buscar</button>
             </form>
         </section>
 
+        <section id="armarpc">
+            <h2>Armá tu PC</h2>
+            <p>Completá el formulario y te ayudamos a elegir los mejores componentes compatibles para tu próxima PC.</p>
+            <form action="#" method="post">
+                <label for="presupuesto-pc">Presupuesto total:</label>
+                <input type="text" id="presupuesto-pc" name="presupuesto-pc" placeholder="Ej: $500.000">
+                
+                <label for="uso-pc">Uso principal:</label>
+                <select id="uso-pc" name="uso-pc">
+                    <option value="">Seleccionar uso</option>
+                    <option value="oficina">Oficina / Hogar</option>
+                    <option value="gaming">Gaming</option>
+                    <option value="gaming-premium">Gaming de alta gama</option>
+                    <option value="edicion">Edición de video/foto</option>
+                    <option value="programacion">Programación</option>
+                    <option value="trabajo">Trabajo profesional 3D/CAD</option>
+                    <option value="streaming">Streaming</option>
+                </select>
+                
+                <label for="tiene-monitor">¿Ya tenés monitor?</label>
+                <select id="tiene-monitor" name="tiene-monitor">
+                    <option value="si">Sí</option>
+                    <option value="no">No, necesito uno</option>
+                </select>
+                
+                <label for="tiene-perifericos">¿Tenés teclado y mouse?</label>
+                <select id="tiene-perifericos" name="tiene-perifericos">
+                    <option value="si">Sí</option>
+                    <option value="no">No, necesito ambos</option>
+                    <option value="parcial">Solo uno</option>
+                </select>
+                
+                <label for="observaciones">Observaciones:</label>
+                <textarea id="observaciones" name="observaciones" rows="4" placeholder="Ej: Necesito que sea silencioso, tengo espacio limitado, prefiero AMD..."></textarea>
+                
+                <button type="submit">Solicitar Armado</button>
+            </form>
+        </section>
+
         <section id="nosotros">
             <h2>Sobre Nosotros</h2>
-            <p>Somos una empresa dedicada a la venta de repuestos automotrices con más de 10 años de experiencia en el mercado. Nuestra misión es proporcionar piezas de calidad a los mejores precios.</p>
+            <p>Somos apasionados por el hardware y los videojuegos. En ArmáTuPc te ayudamos a encontrar los mejores componentes para tu presupuesto, asegurando compatibilidad y rendimiento.</p>
             <address>
-                <p>Dirección: Av. Principal 123, Ciudad</p>
-                <p>Teléfono: (555) 123-4567</p>
-                <p>Email: contacto@autorepuestos.com</p>
-                <p>Horario: Lunes a Viernes de 8:00 a 18:00 hrs</p>
+                <p>Dirección: Av. Tech 456, Ciudad</p>
+                <p>Teléfono: (555) 987-6543</p>
+                <p>Email: hola@armatupc.com</p>
+                <p>Horario: Lunes a Viernes de 10:00 a 19:00 hrs</p>
             </address>
         </section>
 
         <section id="contacto">
-            <h2>Contáctenos</h2>
+            <h2>Contactanos</h2>
             <form action="#" method="post">
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
@@ -99,8 +177,18 @@
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" required>
                 
-                <label for="telefono">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono">
+                <label for="whatsapp">WhatsApp:</label>
+                <input type="tel" id="whatsapp" name="whatsapp" placeholder="Ej: +54 11 1234-5678">
+                
+                <label for="asunto">Asunto:</label>
+                <select id="asunto" name="asunto">
+                    <option value="">Seleccionar asunto</option>
+                    <option value="consulta">Consulta sobre producto</option>
+                    <option value="compatibilidad">Compatibilidad de componentes</option>
+                    <option value="armado">Asesoramiento para armado</option>
+                    <option value="garantia">Garantía o reclamo</option>
+                    <option value="otro">Otro</option>
+                </select>
                 
                 <label for="mensaje">Mensaje:</label>
                 <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
@@ -111,7 +199,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 AutoRepuestos. Todos los derechos reservados.</p>
+        <p>&copy; 2026 ArmáTuPc. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
