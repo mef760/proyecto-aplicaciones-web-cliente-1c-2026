@@ -4,50 +4,224 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AutoRepuestos - Tu tienda de repuestos para automóviles</title>
+    <link rel="stylesheet" href="/style/style.css">
     <meta name="description" content="Encuentra los mejores repuestos para tu vehículo. Amplio catálogo de piezas automotor.">
 </head>
 <body>
-    <header>
-        <h1>Repuestos Pepito</h1>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#productos">Productos</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="/contact.html">Contacto</a></li>
-                <li><a href="https://www.google.com">Búsqueda</a></li>
-                <li><a href="/new-product.html">Alta Producto</a></li>
+    <header class="ml-header">
+        <div class="ml-header-top">
+            <a href="/" class="ml-logo">
+                <span class="ml-logo-icon">🏠</span>
+                <div class="ml-logo-text">
+                    <span class="ml-logo-title">Repuestos</span>
+                    <span class="ml-logo-subtitle">Pepito</span>
+                </div>
+            </a>
+            
+            <div class="ml-search">
+                <form action="/search" method="get" class="ml-search-form">
+                    <input type="text" name="q" placeholder="Buscar productos, marcas, categorías..." class="ml-search-input">
+                    <button type="submit" class="ml-search-btn">
+                        <span>🔍</span>
+                    </button>
+                </form>
+            </div>
+            
+            <div class="ml-header-actions">
+                <nav class="ml-nav">
+                    <ul class="ml-nav-list">
+                        <li><a href="#productos" class="ml-nav-link">Ofertas</a></li>
+                        <li><a href="/about.html" class="ml-nav-link">Nosotros</a></li>
+                        <li><a href="/contact.html" class="ml-nav-link">Contacto</a></li>
+                        <li><a href="/new-product.html" class="ml-nav-link">Admin</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        
+        <div class="ml-categories-bar">
+            <ul class="ml-categories-list">
+                <li><a href="#motor">Motor</a></li>
+                <li><a href="#frenos">Frenos</a></li>
+                <li><a href="#suspension">Suspensión</a></li>
+                <li><a href="#electrico">Eléctrico</a></li>
+                <li><a href="#carroceria">Carrocería</a></li>
+                <li><a href="#accesorios">Accesorios</a></li>
             </ul>
-        </nav>
+        </div>
     </header>
+
+    <aside id="sidebar">
+        <div class="filter-section">
+            <h3 class="filter-title">Categorías</h3>
+            <ul class="filter-list">
+                <li class="filter-item">
+                    <input type="checkbox" id="cat-motor" name="categoria" value="motor">
+                    <label for="cat-motor">Motor (24)</label>
+                </li>
+                <li class="filter-item">
+                    <input type="checkbox" id="cat-frenos" name="categoria" value="frenos">
+                    <label for="cat-frenos">Frenos (18)</label>
+                </li>
+                <li class="filter-item">
+                    <input type="checkbox" id="cat-suspension" name="categoria" value="suspension">
+                    <label for="cat-suspension">Suspensión (12)</label>
+                </li>
+                <li class="filter-item">
+                    <input type="checkbox" id="cat-electrico" name="categoria" value="electrico">
+                    <label for="cat-electrico">Eléctrico (9)</label>
+                </li>
+                <li class="filter-item">
+                    <input type="checkbox" id="cat-carroceria" name="categoria" value="carroceria">
+                    <label for="cat-carroceria">Carrocería (15)</label>
+                </li>
+                <li class="filter-item">
+                    <input type="checkbox" id="cat-accesorios" name="categoria" value="accesorios">
+                    <label for="cat-accesorios">Accesorios (7)</label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="filter-section">
+            <h3 class="filter-title">Precio</h3>
+            <div class="filter-price">
+                <div class="filter-price-inputs">
+                    <div class="filter-price-input-group">
+                        <span class="filter-price-symbol">$</span>
+                        <input type="number" id="price-min" name="price-min" placeholder="Min" class="filter-price-input">
+                    </div>
+                    <span class="filter-price-divider">-</span>
+                    <div class="filter-price-input-group">
+                        <span class="filter-price-symbol">$</span>
+                        <input type="number" id="price-max" name="price-max" placeholder="Max" class="filter-price-input">
+                    </div>
+                </div>
+                <div class="filter-price-slider">
+                    <input type="range" id="price-range" name="price-range" min="0" max="100000" step="1000" class="filter-slider">
+                    <div class="slider-labels">
+                        <span>$0</span>
+                        <span>$100.000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="filter-section">
+            <h3 class="filter-title">Envío</h3>
+            <div class="filter-toggle">
+                <label class="toggle-label">
+                    <input type="checkbox" id="envio-gratis" name="envio-gratis" class="toggle-input">
+                    <span class="toggle-switch"></span>
+                    <span class="toggle-text">Envío gratis</span>
+                </label>
+            </div>
+        </div>
+
+        <button type="button" class="filter-apply-btn">Aplicar filtros</button>
+    </aside>
 
     <main>
         <img src="/img/filtrodeaceite.jpg" alt="Banner de Repuestos de Calidad" width="20%">
-        <section id="inicio">
-            <h2>Bienvenido a Repuestos Pepito</h2>
-            <p>Tu tienda de confianza para repuestos de automóviles. Contamos con amplia variedad de piezas para todas las marcas y modelos.</p>
-        </section>
 
         <section id="productos">
             <h2>Nuestros Productos</h2>
+            
+            <div class="products-grid">
+                <article class="product-card">
+                    <div class="product-image-container">
+                        <span class="badge-envio">Envío gratis</span>
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_637894-MLA81758252428_122024-O.webp" alt="Filtro de Aceite" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Filtro de Aceite Original Toyota</h3>
+                        <p class="product-price">$12.999</p>
+                        <p class="product-cuotas">12x $1.083 sin interés</p>
+                        <p class="product-location">Capital Federal</p>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image-container">
+                        <span class="badge-envio">Envío gratis</span>
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_2X_637894-MLA81758252428_122024-O.webp" alt="Pastillas de Freno" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Juego Pastillas de Freno Delanteras BOSCH</h3>
+                        <p class="product-price">$28.500</p>
+                        <p class="product-cuotas">12x $2.375 sin interés</p>
+                        <p class="product-location">Capital Federal</p>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_3X_637894-MLA81758252428_122024-O.webp" alt="Amortiguador" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Amortiguador Monroe Adaptado</h3>
+                        <p class="product-price">$18.900</p>
+                        <p class="product-cuotas">12x $1.575 sin interés</p>
+                        <p class="product-location">GBA Norte</p>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image-container">
+                        <span class="badge-envio">Envío gratis</span>
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_4X_637894-MLA81758252428_122024-O.webp" alt="Batería" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Batería Moura 12x65</h3>
+                        <p class="product-price">$45.000</p>
+                        <p class="product-cuotas">12x $3.750 sin interés</p>
+                        <p class="product-location">Capital Federal</p>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image-container">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_5X_637894-MLA81758252428_122024-O.webp" alt="Bujía" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Kit 4 Bujías NGK Iridium</h3>
+                        <p class="product-price">$8.500</p>
+                        <p class="product-cuotas">12x $708 sin interés</p>
+                        <p class="product-location">GBA Oeste</p>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image-container">
+                        <span class="badge-envio">Envío gratis</span>
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_6X_637894-MLA81758252428_122024-O.webp" alt="Correa" class="product-image">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Correa de Distribución Gates</h3>
+                        <p class="product-price">$22.000</p>
+                        <p class="product-cuotas">12x $1.833 sin interés</p>
+                        <p class="product-location">Capital Federal</p>
+                    </div>
+                </article>
+            </div>
+
             <article>
-                <h3>Repuestos de Motor</h3>
+                <h3 id="motor">Repuestos de Motor</h3>
                 <p>Filtros, bujías, correas, rodamientos y más para el corazón de tu vehículo.</p>
             </article>
             <article>
-                <h3>Repuestos de Frenos</h3>
+                <h3 id="frenos">Repuestos de Frenos</h3>
                 <p>Pastillas, discos, tambores, líquido de frenos y accesorios de seguridad.</p>
             </article>
             <article>
-                <h3>Suspensión y Dirección</h3>
+                <h3 id="suspension">Suspensión y Dirección</h3>
                 <p>Amortiguadores, rotulas, barillas, bujes y componentes de suspensión.</p>
             </article>
             <article>
-                <h3>Eléctricos y Electrónicos</h3>
+                <h3 id="electrico">Eléctricos y Electrónicos</h3>
                 <p>Baterías, alternadores, sensores, luces y sistemas de iluminación.</p>
             </article>
             <article>
-                <h3>Carrocería</h3>
+                <h3 id="carroceria">Carrocería</h3>
                 <p>Parachoques, espejos, faros, luces y accesorios exteriores.</p>
             </article>
             <article>
@@ -55,45 +229,6 @@
                 <p>Limpiadores, lubricantes, herramientas y productos de mantenimiento.</p>
             </article>
         </section>
-
-        <section id="busqueda">
-            <h2>Buscar Repuestos</h2>
-            <form action="#" method="get">
-                <label for="marca">Marca del vehículo:</label>
-                <input type="text" id="marca" name="marca" placeholder="Ej: Toyota">
-                
-                <label for="modelo">Modelo:</label>
-                <input type="text" id="modelo" name="modelo" placeholder="Ej: Corolla">
-                
-                <label for="ano">Año:</label>
-                <input type="number" id="ano" name="ano" placeholder="Ej: 2020">
-                
-                <label for="categoria">Categoría:</label>
-                <select id="categoria" name="categoria">
-                    <option value="">Seleccionar categoría</option>
-                    <option value="motor">Motor</option>
-                    <option value="frenos">Frenos</option>
-                    <option value="suspension">Suspensión</option>
-                    <option value="electrico">Eléctrico</option>
-                    <option value="carroceria">Carrocería</option>
-                </select>
-                
-                <button type="submit">Buscar</button>
-            </form>
-        </section>
-
-        <section id="nosotros">
-            <h2>Sobre Nosotros</h2>
-            <p>Somos una empresa dedicada a la venta de repuestos automotrices con más de 10 años de experiencia en el mercado. Nuestra misión es proporcionar piezas de calidad a los mejores precios.</p>
-            <address>
-                <p>Dirección: Av. Principal 123, Ciudad</p>
-                <p>Teléfono: (555) 123-4567</p>
-                <p>Email: contacto@autorepuestos.com</p>
-                <p>Horario: Lunes a Viernes de 8:00 a 18:00 hrs</p>
-            </address>
-        </section>
-
-        
     </main>
 
     <footer>
