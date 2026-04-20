@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alta de Producto - Repuestos Pepito</title>
-    <meta name="description" content="Agregar nuevo producto a nuestro catálogo de repuestos">
+    <title>Alta de Producto - TechStore</title>
+    <meta name="description" content="Agregar nuevo producto a nuestro catálogo de informática">
 </head>
 <body>
     <header>
-        <h1>Repuestos Pepito</h1>
+        <h1>TechStore</h1>
         <nav>
             <ul>
                 <li><a href="/index.html">Inicio</a></li>
@@ -30,7 +30,7 @@
                     <legend>Información del Producto</legend>
                     
                     <label for="nombre">Nombre del producto:</label>
-                    <input type="text" id="nombre" name="nombre" required placeholder="Ej: Filtro de aceite Premium">
+                    <input type="text" id="nombre" name="nombre" required placeholder="Ej: Procesador Intel Core i7">
                     
                     <label for="sku">SKU / Código:</label>
                     <input type="text" id="sku" name="sku" required placeholder="Ej: FLT-ACE-001">
@@ -51,19 +51,22 @@
                     <label for="categoria">Categoría:</label>
                     <select id="categoria" name="categoria" required>
                         <option value="">Seleccionar categoría</option>
-                        <option value="motor">Motor</option>
-                        <option value="frenos">Frenos</option>
-                        <option value="suspension">Suspensión</option>
-                        <option value="electrico">Eléctrico</option>
-                        <option value="carroceria">Carrocería</option>
-                        <option value="accesorios">Accesorios</option>
+                        <option value="procesadores">Procesadores</option>
+                        <option value="ram">Memorias RAM</option>
+                        <option value="ssd">Discos SSD</option>
+                        <option value="gpu">Placas de Video</option>
+                        <option value="motherboard">Motherboards</option>
+                        <option value="coolers">Coolers</option>
+                        <option value="gabinetes">Gabinetes</option>
+                        <option value="fuentes">Fuentes</option>
+                        <option value="monitores">Monitores</option>
                     </select>
                     
                     <label for="marca">Marca:</label>
-                    <input type="text" id="marca" name="marca" required placeholder="Ej: Bosch">
+                    <input type="text" id="marca" name="marca" required placeholder="Ej: Intel, AMD, NVIDIA">
                     
-                    <label for="modelo_compatible">Modelo compatible:</label>
-                    <input type="text" id="modelo_compatible" name="modelo_compatible" placeholder="Ej: Toyota Corolla, Honda Civic">
+                    <label for="modelo_compatible">Compatible con:</label>
+                    <input type="text" id="modelo_compatible" name="modelo_compatible" placeholder="Ej: LGA1700, AM5">
                     
                     <label for="ano_desde">Año desde:</label>
                     <input type="number" id="ano_desde" name="ano_desde" min="1900" max="2030" placeholder="Ej: 2015">
@@ -84,10 +87,8 @@
                     <label for="unidad">Unidad de medida:</label>
                     <select id="unidad" name="unidad">
                         <option value="pieza">Pieza</option>
-                        <option value="juego">Juego</option>
+                        <option value="kit">Kit</option>
                         <option value="set">Set</option>
-                        <option value="litro">Litro</option>
-                        <option value="metro">Metro</option>
                     </select>
                 </fieldset>
 
@@ -140,7 +141,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 AutoRepuestos. Todos los derechos reservados.</p>
+        <p>&copy; 2026 TechStore. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
