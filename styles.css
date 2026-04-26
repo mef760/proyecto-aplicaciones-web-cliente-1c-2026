@@ -192,6 +192,46 @@ p {
   border-color: var(--color-primary);
 }
 
+.search-bar {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 1.5rem auto 0;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  overflow: hidden;
+  background: var(--color-bg);
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: none;
+  font-family: var(--font-primary);
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.search-btn {
+  padding: 0.75rem 1rem;
+  background: transparent;
+  border: none;
+  color: var(--color-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.search-btn:hover {
+  background: rgba(230, 126, 34, 0.1);
+}
+
 .menu-content {
   padding: 2rem 1rem;
   max-width: 1200px;
