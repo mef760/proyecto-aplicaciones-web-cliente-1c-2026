@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "nombre": "Pizza Margarita",
+    "descripcion": "Tomate, mozzarella, albahaca",
+    "precio": 12.00,
+    "imagen": "🍕",
+    "tags": ["featured", "vegetarian"]
+  },
+  {
+    "id": 2,
+    "nombre": "Hamburguesa Clásica",
+    "descripcion": "Carne, queso, lechuga, tomate",
+    "precio": 10.00,
+    "imagen": "🍔",
+    "tags": ["featured"]
+  },
+  {
+    "id": 3,
+    "nombre": "Tacos al Pastor",
+    "descripcion": "Carne marinada, cebolla, cilantro",
+    "precio": 8.00,
+    "imagen": "🌮",
+    "tags": ["spicy"]
+  },
+  {
+    "id": 4,
+    "nombre": "Spaghetti Bolognese",
+    "descripcion": "Pasta, carne molida, tomate",
+    "precio": 11.00,
+    "imagen": "🍝",
+    "tags": ["vegetarian"]
+  },
+  {
+    "id": 5,
+    "nombre": "Ensalada César",
+    "descripcion": "Lechuga, pollo, crutones, parmesano",
+    "precio": 9.00,
+    "imagen": "🥗",
+    "tags": ["vegetarian", "new"]
+  },
+  {
+    "id": 6,
+    "nombre": "Flan de Vainilla",
+    "descripcion": "Flan con caramelo y crema",
+    "precio": 5.00,
+    "imagen": "🍰",
+    "tags": ["featured"]
+  }
+]
